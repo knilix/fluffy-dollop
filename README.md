@@ -1,2 +1,2 @@
 # unraid-templates
-Central storage for unRaid Templates
+Central storage for unRAID Templates

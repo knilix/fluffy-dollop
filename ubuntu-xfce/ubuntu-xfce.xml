@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ubuntu-xfce</Name>
+  <Repository>knilix/ubuntu-xfce-vnc-novnc</Repository>
+  <Registry>https://hub.docker.com/r/knilix/ubuntu-xfce-vnc-novnc</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>Ubuntu 20.04 (LTS), XFCE-Desktop, noVNC, LibreOffice, Firefox&#xD;
+Language: Predominantly German&#xD;
+User: ubuntu | Password: ubuntu&#xD;
+To change the user password, enter the following in the Docker terminal: sudo passwd ubuntu&#xD;
+noVNC: Port: 6900 (changeable)&#xD;
+Start in Browser: IP-Adress:6900/vnc.html&#xD;
+Only one instance of noVNC can be active at a time. This image is for testing purposes. All changes in Docker will be lost if it is deleted/destroyed or an update appears.&#xD;
+This docker is for informational purposes about this guide series: https://knilixdock.wordpress.com/ubuntu-xfce-vnc-novnc/</Overview>
+  <Category>Status:Beta</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/knilix/ubuntu-focal_fossa-xfce-vnc-novnc/blob/main/opt/xfce_logo.png?raw=true</Icon>
+  <ExtraParams>--restart=unless-stopped --memory=2G</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1635699486</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Ubuntu 20.04 (LTS), XFCE-Desktop, noVNC, LibreOffice, Firefox&#xD;
+Language: Predominantly German&#xD;
+User: ubuntu | Password: ubuntu&#xD;
+To change the user password, enter the following in the Docker terminal: sudo passwd ubuntu&#xD;
+noVNC: Port: 6900 (changeable)&#xD;
+Start in Browser: IP-Adress:6900/vnc.html&#xD;
+Only one instance of noVNC can be active at a time. This image is for testing purposes. All changes in Docker will be lost if it is deleted/destroyed or an update appears.&#xD;
+This docker is for informational purposes about this guide series: https://knilixdock.wordpress.com/ubuntu-xfce-vnc-novnc/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>6900</HostPort>
+        <ContainerPort>8080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value>mypassword</Value>
+      <Name>VNC_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="VNC Password" Target="VNC_PASSWORD" Default="mypassword" Mode="" Description="Please chose a strong password" Type="Variable" Display="always" Required="true" Mask="false">mypassword</Config>
+  <Config Name="TCP - VNC Port" Target="8080" Default="6900" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">6900</Config>
+</Container>
